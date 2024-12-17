@@ -19,13 +19,13 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String desc;
+    private String description;
     private String brand;
     private BigDecimal price;
     private String category;
     private Date releaseDate;
     private boolean available;
-    private int quantity;
+    private int stockQuantity;
 
     public String imageName;
     public String imageType;
@@ -73,11 +73,11 @@ public class Product {
     }
 
     public String getDesc() {
-        return desc;
+        return description;
     }
 
     public void setDesc(String desc) {
-        this.desc = desc;
+        this.description = desc;
     }
 
     public String getBrand() {
@@ -121,10 +121,10 @@ public class Product {
     }
 
     public int getQuantity() {
-        return quantity;
+        return stockQuantity;
     }
 
     public void setQuantity(int quantity) {
-        this.quantity = quantity;
+        this.stockQuantity = quantity;
     }
 }
