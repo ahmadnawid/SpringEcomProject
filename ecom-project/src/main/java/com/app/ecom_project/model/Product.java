@@ -9,10 +9,10 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 import java.util.Date;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class Product {
 
     @Id
@@ -24,7 +24,7 @@ public class Product {
     private BigDecimal price;
     private String category;
     private Date releaseDate;
-    private boolean available;
+    private boolean productAvailable;
     private int stockQuantity;
 
     public String imageName;
@@ -113,11 +113,11 @@ public class Product {
     }
 
     public boolean isAvailable() {
-        return available;
+        return productAvailable;
     }
 
     public void setAvailable(boolean available) {
-        this.available = available;
+        this.productAvailable = available;
     }
 
     public int getQuantity() {
